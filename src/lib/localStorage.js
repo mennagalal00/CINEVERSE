@@ -1,4 +1,4 @@
-// Recently viewed
+
 export const getRecentlyViewed = () => {
   try {
     return JSON.parse(localStorage.getItem("cv_recently_viewed") || "[]");
@@ -14,7 +14,6 @@ export const addRecentlyViewed = (movie) => {
   } catch {}
 };
 
-// Search history
 export const getSearchHistory = () => {
   try {
     return JSON.parse(localStorage.getItem("cv_search_history") || "[]");

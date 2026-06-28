@@ -7,6 +7,7 @@ import { IMG_W500, PLACEHOLDER } from "../lib/constants";
 import StarRating from "../components/ui/StarRating";
 import EmptyState from "../components/ui/EmptyState";
 
+
 function Favorites() {
   const favorites = useSelector((s) => s.favorites.items);
   const dispatch = useDispatch();

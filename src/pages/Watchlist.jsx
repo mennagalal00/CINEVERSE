@@ -8,6 +8,7 @@ import StarRating from "../components/ui/StarRating";
 import EmptyState from "../components/ui/EmptyState";
 import { toast } from "react-toastify";
 
+
 function Watchlist() {
   const watchlist = useSelector((s) => s.watchlist.items);
   const dispatch = useDispatch();

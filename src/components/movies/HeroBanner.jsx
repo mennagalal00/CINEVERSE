@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlay, FaInfoCircle, FaStar } from "react-icons/fa";
-import { IMG_ORIGINAL, IMG_W500, PLACEHOLDER } from "../../lib/constants";
+import { IMG_ORIGINAL } from "../../lib/constants";
 import { api } from "../../lib/api";
 import { SkeletonHero } from "../ui/SkeletonCard";
 import TrailerModal from "../ui/TrailerModal";

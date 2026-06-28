@@ -4,7 +4,7 @@ import { API_KEY } from "./constants";
 const params = (extra = {}) => ({ api_key: API_KEY, ...extra });
 
 export const api = {
-  // Home categories
+  
   getTrending: (page = 1) =>
     axiosInstance.get("/trending/movie/week", { params: params({ page }) }),
   getPopular: (page = 1) =>
@@ -16,7 +16,7 @@ export const api = {
   getNowPlaying: (page = 1) =>
     axiosInstance.get("/movie/now_playing", { params: params({ page }) }),
 
-  // Search
+
   searchMovies: (query, page = 1, filters = {}) => {
     const extra = { query, page };
     if (filters.genre) extra.with_genres = filters.genre;
@@ -34,13 +34,13 @@ export const api = {
     return axiosInstance.get("/discover/movie", { params: params(extra) });
   },
 
-  // Details
+  
   getMovieDetails: (id) =>
     axiosInstance.get(`/movie/${id}`, {
       params: params({ append_to_response: "credits,videos,similar,images" }),
     }),
 
-  // Genres
+  
   getGenres: () =>
     axiosInstance.get("/genre/movie/list", { params: params() }),
 };

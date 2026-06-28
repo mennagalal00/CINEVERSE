@@ -33,7 +33,7 @@ function Profile() {
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
 
-        {/* Avatar & name */}
+        
         <div className="text-center mb-10">
           <div className="w-24 h-24 bg-gradient-to-br from-[#e50914] to-red-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl ring-4 ring-[#e50914]/20">
             <span className="font-display text-4xl text-white tracking-widest">{initials}</span>
@@ -44,7 +44,7 @@ function Profile() {
           </p>
         </div>
 
-        {/* Stats */}
+     
         <div className="grid grid-cols-2 gap-4 mb-8">
           <Link to="/favorites" className="bg-[#1a1a1a] border border-[#2a2a2a] hover:border-[#e50914]/30 rounded-2xl p-6 text-center transition-colors group">
             <FaHeart className="text-[#e50914] text-2xl mx-auto mb-3 group-hover:scale-110 transition-transform" />
@@ -58,7 +58,7 @@ function Profile() {
           </Link>
         </div>
 
-        {/* Account info */}
+        
         <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-6 mb-6">
           <h3 className="text-white font-semibold text-sm mb-4 flex items-center gap-2">
             <FaUser className="text-gray-500 text-xs" /> Account Details

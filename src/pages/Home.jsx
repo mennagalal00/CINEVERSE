@@ -122,7 +122,7 @@ function Home() {
           />
         </div>
 
-        {/* Search results */}
+      
         {showSearchResults && (
           <>
             <div className="flex items-center gap-3 mb-6">
@@ -153,7 +153,7 @@ function Home() {
               <EmptyState type="search" description={`No movies found for "${search || "these filters"}"`} />
             )}
 
-            {/* Pagination */}
+           
             {!loading && movies.length > 0 && totalPages > 1 && (
               <div className="flex items-center justify-center gap-2 mt-12">
                 <button onClick={() => changePage(page - 1)} disabled={page === 1}
@@ -182,7 +182,7 @@ function Home() {
           </>
         )}
 
-        {/* Category carousels */}
+      
         {!showSearchResults && (
           <div className="mt-8">
             {recentlyViewed.length > 1 && (

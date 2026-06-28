@@ -54,20 +54,19 @@ function MovieCard({ movie, index = 0 }) {
               />
             </div>
 
-            {/* Overlay */}
+            
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
               <p className="text-white text-xs line-clamp-3 leading-relaxed">
                 {movie.overview || "No description available."}
               </p>
             </div>
 
-            {/* Rating */}
+            
             <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/70 backdrop-blur-sm rounded-full px-2 py-0.5">
               <FaStar className="text-yellow-400 text-xs" />
               <span className="text-white text-xs font-semibold">{movie.vote_average?.toFixed(1)}</span>
             </div>
 
-            {/* Action buttons */}
             <div className="absolute top-2 right-2 flex flex-col gap-1.5">
               <button
                 onClick={handleFav}

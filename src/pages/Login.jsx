@@ -29,7 +29,7 @@ function Login() {
     setLoading(true);
     await new Promise((r) => setTimeout(r, 600));
     login(form.email);
-    toast.success("Welcome back! 🎬");
+    toast.success("Welcome back! ");
     navigate("/");
     setLoading(false);
   };
@@ -41,7 +41,7 @@ function Login() {
 
   return (
     <div className="min-h-screen bg-[#141414] flex items-center justify-center px-4 relative overflow-hidden">
-      {/* Background blur blobs */}
+    
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#e50914]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-red-900/5 rounded-full blur-3xl pointer-events-none" />
 
@@ -51,7 +51,6 @@ function Login() {
         transition={{ duration: 0.5 }}
         className="w-full max-w-md"
       >
-        {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2 mb-4">
             <div className="w-10 h-10 bg-[#e50914] rounded-xl flex items-center justify-center">
@@ -63,11 +62,9 @@ function Login() {
           <p className="text-gray-500 text-sm mt-1">Sign in to access your favourites</p>
         </div>
 
-        {/* Card */}
         <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl p-8 shadow-2xl">
           <form onSubmit={handleSubmit} className="space-y-5">
 
-            {/* Email */}
             <div>
               <label className="block text-xs font-medium text-gray-400 mb-1.5">Email</label>
               <input
@@ -80,7 +77,6 @@ function Login() {
               {errors.email && <p className="text-[#e50914] text-xs mt-1">{errors.email}</p>}
             </div>
 
-            {/* Password */}
             <div>
               <label className="block text-xs font-medium text-gray-400 mb-1.5">Password</label>
               <div className="relative">
@@ -102,7 +98,7 @@ function Login() {
               {errors.password && <p className="text-[#e50914] text-xs mt-1">{errors.password}</p>}
             </div>
 
-            {/* Submit */}
+           
             <button
               type="submit"
               disabled={loading}

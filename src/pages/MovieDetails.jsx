@@ -93,12 +93,12 @@ function MovieDetails() {
           </Link>
 
           <div className="flex flex-col md:flex-row gap-8">
-            {/* Poster */}
+      
             <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="flex-shrink-0">
               <img src={poster} alt={movie.title} className="w-48 md:w-64 rounded-2xl shadow-2xl mx-auto md:mx-0 ring-1 ring-white/10" />
             </motion.div>
 
-            {/* Info */}
+          
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="flex-1">
               <div className="flex flex-wrap gap-2 mb-3">
                 {movie.genres?.map((g) => (
@@ -135,7 +135,7 @@ function MovieDetails() {
 
               <p className="text-gray-300 leading-relaxed text-sm mb-6 max-w-2xl">{movie.overview || "No overview available."}</p>
 
-              {/* Actions */}
+             
               <div className="flex flex-wrap gap-3 mb-8">
                 {trailer && (
                   <button onClick={() => setTrailerOpen(true)}
@@ -159,7 +159,7 @@ function MovieDetails() {
                 </button>
               </div>
 
-              {/* Cast */}
+              
               {cast.length > 0 && (
                 <div className="mb-6">
                   <h3 className="text-white font-semibold text-sm mb-3 flex items-center gap-2">
@@ -183,7 +183,7 @@ function MovieDetails() {
                 </div>
               )}
 
-              {/* Production companies */}
+              
               {companies.length > 0 && (
                 <div>
                   <h3 className="text-white font-semibold text-sm mb-3 flex items-center gap-2">
@@ -206,7 +206,6 @@ function MovieDetails() {
           </div>
         </div>
 
-        {/* Similar movies */}
         {similar.length > 0 && (
           <div className="mt-4 pb-8">
             <MovieCarousel title="Similar Movies" movies={similar} loading={false} accentColor="#e50914" />
